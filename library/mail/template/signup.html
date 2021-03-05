@@ -1,0 +1,161 @@
+<html>
+    <head>
+        <style>
+            body {
+                font-family: "Segoe UI";
+            }
+
+            .items {
+                text-align: left; 
+                margin-left: 10px; 
+                margin-right: 10px; 
+            }
+
+            .items.center {
+                text-align: center;
+            }
+
+            .items .item-title {
+                font-style: normal;
+                font-weight: bold;
+                color: #535353;
+            }
+
+            .items .item-content {
+                font-style: normal;
+                font-weight: normal;
+                line-height: 25px;
+                color: #535353;
+            }
+
+            .items .btn-activation {
+                text-decoration: none;
+                border-radius: 65px;
+            }
+
+            .items .btn-activation.btn-orange {
+                background-color: #FFBB00; 
+                color: #fff; 
+                border-style: hidden;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .items .btn-info {
+                text-decoration: none; 
+                border-radius: 7px;
+            }
+
+            .items .btn-info.btn-grey {
+                color: #646464; 
+                background-color: #EDEDED; 
+                border-style: hidden;
+            }
+
+            .item-container{
+                text-align: center;
+                margin: 0 auto;
+                display: block;
+            }
+
+            .item-container.btn-info.btn-grey {
+                color: #646464; 
+                background-color: #EDEDED; 
+                padding-left: 20px;
+                padding-right: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div style="background-color: #fff;">
+            <table class="outer" align="center" style="border: 1px solid #BDBDBD; border-radius: 20px">
+                <tr>
+                    <td class="left-sidebar">
+                        <div class="column right" style="max-width: 100%">
+                            <table width="100%">
+                                <tr>
+                                    <td class="inner">
+                                        <p style="margin-top: 10px; margin-bottom: 20px; text-align: left;">
+                                            <img src="https://drive.google.com/uc?export=view&id=1o5QgmL1oVIVJfbcviCw0BORSxuUjS_Os" width="172" alt="" />
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr style="background-color: #fff;">
+                    <td class="one-column">
+                        <table width="100%">
+                            <tr>
+                                <td class="inner">
+                                    <p style="margin-top: 50px; margin-bottom: 20px; text-align: center;">
+                                        <img src="https://drive.google.com/uc?export=view&id=1u1q2bX1kp1MkIgYvgy6UIPaAQSEYidKx" width="213" alt="" />
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="inner contents">
+                                    <p class="items">
+                                        <span class="item-title">Verifikasi Email Kamu</span>,<br>
+                                    </p>
+                                    <p class="items">
+                                        <span class="item-content">Data registrasi kamu telah berhasil kami terima. Verifikasi email kamu dengan mengklik tautan di bawah ini:</span>
+                                    </p>
+                                    <p class="items center">
+                                        <table width="100%" cellspacing="0" cellpadding="0">
+                                            <tr>
+                                                <td>
+                                                    <table cellspacing="0" cellpadding="0" align="center">
+                                                        <tr>
+                                                            <td style="border-radius: 2px; color: #fff; background-color: #FFBB00; border-radius: 65px;">
+                                                                <a href="{{ .ButtonLink }}" style="padding: 8px 12px; color: #fff; display: inline-block; text-decoration: none;">
+                                                                    Verifikasi Email
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </p>
+                                    <p class="items">
+                                        <span class="item-content">Atau kamu dapat menyalin kode berikut untuk meverifikasi email kamu.</span>
+                                    </p>
+                                    <p class="items">
+                                        <span class="item-title">{{ .CodeActivation }}</span>,<br>
+                                    </p>
+                                    <p class="items">
+                                        <span class="item-content">Bila ada pertanyaan, silakan hubungi kami.</span>
+                                    </p>
+                                    <p class="items center">
+                                        <table width="100%" cellspacing="0" cellpadding="0">
+                                            <tr>
+                                                <td>
+                                                    <table cellspacing="0" cellpadding="0" align="center">
+                                                        <tr>
+                                                            <td style="border-radius: 2px; color: #646464; background-color: #EDEDED;">
+                                                                <a href="#" style="padding: 8px 12px; color: #646464; display: inline-block; text-decoration: none; ">
+                                                                    <span><img src="https://drive.google.com/uc?export=view&id=1V_9-k1gvXmJ9wk-FNiMOmUtLKhGzpqxm" height="20" alt="" /></span> cs@pesenyuk.id             
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </p>
+                                    <p class="items" style="text-align: center;">
+                                        <img src="https://drive.google.com/uc?export=view&id=1YKUFMi0eUbe4ajJXz4TPPo7MO7ktdw2C" width="150" alt="" />
+                                    </p>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
