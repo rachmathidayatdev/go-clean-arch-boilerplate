@@ -5,7 +5,7 @@ import (
 	consulRepository "github.com/go-clean-arch-boilerplate/pkg/consul/repository"
 	consulUsecase "github.com/go-clean-arch-boilerplate/pkg/consul/usecase"
 	"github.com/jinzhu/gorm"
-	"github.com/labstack/echo"
+	"github.com/labstack/echo/v4"
 )
 
 //initHandler struct

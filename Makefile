@@ -36,3 +36,6 @@ heroku-log:
 
 docker-remove-unused:
 	@docker system prune
+
+# for clean build cache heroku
+# https://help.heroku.com/18PI5RSY/how-do-i-clear-the-build-cache

@@ -10,8 +10,11 @@ import (
 	"github.com/go-clean-arch-boilerplate/router"
 	"github.com/jinzhu/gorm"
 	"github.com/joho/godotenv"
-	"github.com/labstack/echo"
-	"github.com/labstack/echo/middleware"
+	"github.com/labstack/echo/v4"
+	"github.com/labstack/echo/v4/middleware"
+	echoSwagger "github.com/swaggo/echo-swagger"
+
+	_ "github.com/go-clean-arch-boilerplate/docs"
 )
 
 //App struct
@@ -20,6 +23,21 @@ type App struct {
 	DB     *gorm.DB
 }
 
+// @title Swagger Example API
+// @version 1.0
+// @description This is a sample server Petstore server.
+// @termsOfService http://swagger.io/terms/
+
+// @contact.name API Support
+// @contact.url http://www.swagger.io/support
+// @contact.email support@swagger.io
+
+// @license.name Apache 2.0
+// @license.url http://www.apache.org/licenses/LICENSE-2.0.html
+
+// @host localhost:4747
+// @BasePath /
+// @schemes http
 func main() {
 	error := godotenv.Load()
 
@@ -57,6 +75,8 @@ func (app *App) Initialize() {
 	}
 
 	http.Handle("/", app.Router)
+
+	app.Router.GET("/swagger/*", echoSwagger.WrapHandler)
 
 	log.Printf("API Service listening on port %v", apiServicePort)
 

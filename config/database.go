@@ -16,6 +16,7 @@ type DBConfig struct {
 	Host     string
 	Port     string
 	Charset  string
+	SSLMode  string
 }
 
 //GetConfigDB function
@@ -29,6 +30,7 @@ func GetConfigDB() *Config {
 			Host:     os.Getenv("DB_HOST"),
 			Port:     os.Getenv("DB_PORT"),
 			Charset:  "utf8",
+			SSLMode:  os.Getenv("SSL_MODE"),
 		},
 	}
 }
